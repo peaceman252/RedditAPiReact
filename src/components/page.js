@@ -16,7 +16,7 @@ class Page extends React.Component{
 
     componentWillMount() {
         //Fetchs a new page of data relating to the id
-        fetch('http://www.reddit.com/r/' + this.props.subreddit +'.json?count=25&after=t3_8ca5ve')
+        fetch('https://www.reddit.com/r/' + this.props.subreddit +'.json?count=25&after=t3_8ca5ve')
         .then(response => {
             if(response.ok) return response.json();
             throw new Error('Request failed.');

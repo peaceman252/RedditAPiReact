@@ -13,7 +13,7 @@ class Post extends React.Component{
     let image = this.props.image;
     return(
       <Col xs={12} md={2} className='box'>
-        <h4><a href={'http://www.reddit.com/r/' + subreddit + '/comments/' + postId}>{this.props.title}</a></h4>
+        <h4><a href={'https://www.reddit.com/r/' + subreddit + '/comments/' + postId}>{this.props.title}</a></h4>
         <img  src={this.props.thumbnail}></img>
         <p>{this.props.author}</p>
         <Link to={`/comments/${subreddit}/${postId}/${image}`}>comments</Link>          

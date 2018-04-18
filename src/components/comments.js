@@ -39,7 +39,7 @@ class Comments extends React.Component{
             }, 
             function(){
                 //Uses the states to fetch data
-                fetch('http://www.reddit.com/r/' + this.state.subreddit + '/comments/' + this.state.id + '.json')
+                fetch('https://www.reddit.com/r/' + this.state.subreddit + '/comments/' + this.state.id + '.json')
                 .then(response => {
                     if(response.ok) return response.json();
                     throw new Error('Request failed.');
@@ -92,7 +92,7 @@ class Comments extends React.Component{
         return(
             <div>
                 <Row>
-                    <p className='link'><a href={'http://www.reddit.com/r/' + this.state.subreddit + '/comments/' + this.state.id}>{title}</a></p>
+                    <p className='link'><a href={'https://www.reddit.com/r/' + this.state.subreddit + '/comments/' + this.state.id}>{title}</a></p>
                 </Row>
                 <Row>
                     {author}

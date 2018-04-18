@@ -26,7 +26,7 @@ export default class Soccer extends React.Component {
 
     componentWillMount() {
         //data is fetched
-        fetch('http://www.reddit.com/r/' + this.state.subreddit +'.json')
+        fetch('https://www.reddit.com/r/' + this.state.subreddit +'.json')
         .then(response => {
             if(response.ok) return response.json();
             throw new Error('Request failed.');

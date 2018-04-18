@@ -14,7 +14,7 @@ export default class Funny extends React.Component {
   };
 
   componentWillMount() {
-    fetch('http://www.reddit.com/r/' + this.state.subreddit +'.json')
+    fetch('https://www.reddit.com/r/' + this.state.subreddit +'.json')
     .then(response => {
       if(response.ok) return response.json();
       throw new Error('Request failed.');

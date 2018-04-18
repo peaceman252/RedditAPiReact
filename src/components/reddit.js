@@ -29,7 +29,7 @@ export default class Reddit extends React.Component {
     handleSubmit(event) {
         //Sets value and fetches data, when activated on a subreddit page the new posts are placed underneath the existing ones
         this.setState({subreddit: event.target.value});
-        fetch('http://www.reddit.com/r/' + this.state.subreddit +'.json')
+        fetch('https://www.reddit.com/r/' + this.state.subreddit +'.json')
         .then(response => {
             if(response.ok) return response.json();
             throw new Error('Request failed.');
